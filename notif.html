@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konek - Notifications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e1e8ed;
+            padding: 10px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar img {
+            height: 60px;
+            width: 95px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f21d1d;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f21d1d;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .notification-header h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .notifications {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .notification {
+            display: flex;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            align-items: center;
+        }
+
+        .notification img {
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .notification-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .notification-text p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .notification-text span {
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+          <img src="C:\Users\USER\Downloads\konnek.png">
+          <nav>
+            <ul>
+              <li><a href="home.html">Beranda</a></li>
+              <li><a href="search.html">Jelajahi</a></li>
+              <li><a href="notif.html">Notifikasi</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <div class="main-content">
+        <div class="notification-header">
+            <h1>Notifications</h1>
+        </div>
+
+        <div class="notifications">
+            <div class="notification">
+                <img src="https://via.placeholder.com/50" alt="User profile picture">
+                <div class="notification-text">
+                    <p><strong>User297</strong> liked your post.</p>
+                    <span>2 minutes ago</span>
+                </div>
+            </div>
+
+            <div class="notification">
+                <img src="https://via.placeholder.com/50" alt="User profile picture">
+                <div class="notification-text">
+                    <p><strong>user317</strong> liked your post.</p>
+                    <span>5 minutes ago</span>
+                </div>
+            </div>
+
+            <div class="notification">
+                <img src="https://via.placeholder.com/50" alt="User profile picture">
+                <div class="notification-text">
+                    <p><strong>user254</strong> commented on your post.</p>
+                    <span>10 minutes ago</span>
+                </div>
+            </div>
+
+            <div class="notification">
+                <img src="https://via.placeholder.com/50" alt="User profile picture">
+                <div class="notification-text">
+                    <p><strong>user123</strong> mentioned you in a comment.</p>
+                    <span>20 minutes ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konnek.co</title>
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #14171a;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e8ed;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img {
+    height: 60px;
+    width: 95px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f21d1d;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f21d1d;
+}
+
+.left-sidebar, .right-sidebar {
+    width: 25%;
+    background-color: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.suggested-list {
+    list-style-type: none;
+    padding: 0;
+}
+.main-content {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.new-tweet {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.tweet-button {
+    background-color: #f21d1d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tweet-button:hover {
+    background-color: #f21d1d;
+}
+
+.Konnekted People {
+    margin-top: 20px;
+}
+
+.Konnek {
+    border-bottom: 1px solid #e1e8ed;
+    padding: 10px 0;
+}
+
+.Konnek p {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #e1e8ed;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.suggested-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .suggested-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .suggested-list li img {
+    object-fit: cover;
+  }
+  
+  .suggested-list li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  .left-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .action-buttons button {
+      background: none;
+      border: none;
+      color: #f21d1d;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 5px;
+      transition: color 0.3s;
+  }
+
+  .action-buttons button:hover {
+      color: #f21d1d;
+  }
+
+  .comment-section {
+      margin-top: 10px;
+  }
+
+  .comment-input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #e1e8ed;
+      border-radius: 20px;
+      font-size: 14px;
+  }
+
+  .add-comment {
+      background-color: #f21d1d;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 5px;
+      transition: background-color 0.3s;
+  }
+
+  .add-comment:hover {
+      background-color: #f21d1d;
+      ;
+  }
+
+  .comments {
+      margin-top: 10px;
+      border-top: 1px solid #e1e8ed;
+      padding-top: 5px;
+  }
+
+  .comments p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #657786;
+  }
+
+  .Konnek {
+      border-bottom: 1px solid #e1e8ed;
+      padding: 10px 0;
+      transition: background-color 0.3s;
+  }
+
+  .Konnek:hover {
+      background-color: #f5f8fa;
+  }
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <img src="C:\Users\USER\Downloads\konnek.png">
+      <nav>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="search.html">Jelajahi</a></li>
+          <li><a href="notif.html">Notifikasi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="left-sidebar">
+      <h2>Populer</h2>
+      <ul>
+        <li>#satulangkahdidepan</li>
+        <li>#unesakampusjuara</li>
+        <li>#gayatama</li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="new-tweet">
+        <textarea id="tweetInput" placeholder="Apa yang terjadi?" rows="3"></textarea>
+        <button id="tweetButton" class="tweet-button">Kirim</button>
+      </div>
+
+      <div class="Konnekted People" id="konnektedPeople">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 Konnek Indonesia</p>
+  </footer>
+  <script>
+    const tweetInput = document.getElementById('tweetInput');
+    const tweetButton = document.getElementById('tweetButton');
+    const konnektedPeople = document.getElementById('konnektedPeople');
+
+    function createTweet(tweetText) {
+      const newKonnek = document.createElement('div');
+      newKonnek.classList.add('Konnek');
+
+      const newPara = document.createElement('p');
+      newPara.innerHTML = `<strong>@user</strong> ${tweetText}`;
+      newKonnek.appendChild(newPara);
+
+      const actionButtons = document.createElement('div');
+      actionButtons.classList.add('action-buttons');
+
+      const likeButton = document.createElement('button');
+      likeButton.classList.add('like-button');
+      likeButton.textContent = 'Suka';
+      likeButton.addEventListener('click', function() {
+        likeButton.textContent = likeButton.textContent === 'Suka' ? 'Disukai' : 'Suka';
+      });
+      actionButtons.appendChild(likeButton);
+
+      const commentButton = document.createElement('button');
+      commentButton.classList.add('comment-button');
+      commentButton.textContent = 'Komentar';
+      actionButtons.appendChild(commentButton);
+
+      const shareButton = document.createElement('button');
+      shareButton.classList.add('share-button');
+      shareButton.textContent = 'Bagikan';
+      shareButton.addEventListener('click', function() {
+        navigator.clipboard.writeText(tweetText)
+          .then(() => alert('Teks tweet telah disalin ke clipboard!'))
+          .catch(err => console.error('Gagal menyalin: ', err));
+      });
+      actionButtons.appendChild(shareButton);
+      
+      const commentSection = document.createElement('div');
+      commentSection.classList.add('comment-section');
+
+      const commentInput = document.createElement('input');
+      commentInput.type = 'text';
+      commentInput.classList.add('comment-input');
+      commentInput.placeholder = 'Tulis komentar...';
+
+      const addCommentButton = document.createElement('button');
+      addCommentButton.classList.add('add-comment');
+      addCommentButton.textContent = 'Tambah Komentar';
+
+      const commentsDiv = document.createElement('div');
+      commentsDiv.classList.add('comments');
+
+      addCommentButton.addEventListener('click', function() {
+        const commentText = commentInput.value.trim();
+        if (commentText !== '') {
+          const commentPara = document.createElement('p');
+          commentPara.innerHTML = `<strong>@user</strong> ${commentText}`;
+          commentsDiv.appendChild(commentPara);
+          commentInput.value = ''; // Kosongkan input komentar
+        }
+      });
+
+      commentSection.appendChild(commentInput);
+      commentSection.appendChild(addCommentButton);
+      commentSection.appendChild(commentsDiv);
+
+      newKonnek.appendChild(actionButtons);
+      newKonnek.appendChild(commentSection);
+      return newKonnek;
+    }
+
+    tweetButton.addEventListener('click', function() {
+      const newTweetText = tweetInput.value;
+      if (newTweetText.trim() !== '') {
+        const newTweet = createTweet(newTweetText);
+        konnektedPeople.appendChild(newTweet);
+        tweetInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

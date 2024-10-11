@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="searchcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Pencarian</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e1e8ed;
+            padding: 10px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar img {
+            height: 60px;
+            width: 95px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f21d1d;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f21d1d;
+        }
+
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        header input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        header button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        header button:hover i {
+            color: #ffffff;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+
+        .result-card {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #ffffff;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <img src="C:\Users\USER\Downloads\konnek.png">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Beranda</a></li>
+                    <li><a href="search.html">Jelajahi</a></li>
+                    <li><a href="notif.html">Notifikasi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header>
+        <h1>Konnek with the World</h1>
+        <div>
+            <input type="text" placeholder="Search everything.." id="search-input">
+            <button id="search-button">
+                <i class="fas fa-search" style="font-size: 18px; color: #f21d1d;"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="results" id="results-section">
+            <h2>Hasil Pencarian</h2>
+            <div id="search-results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;© 2024 Konnek Indonesia</p>
+    </footer>
+
+    <script>
+        document.getElementById('search-button').addEventListener('click', function() {
+            const query = document.getElementById('search-input').value;
+            const resultsContainer = document.getElementById('search-results');
+
+            resultsContainer.innerHTML = '';
+
+            if (query) {
+        
+                const results = [
+                    { title: 'Hasil untuk ' + query + ' 1', description: 'Deskripsi hasil 1 untuk ' + query },
+                    { title: 'Hasil untuk ' + query + ' 2', description: 'Deskripsi hasil 2 untuk ' + query },
+                    { title: 'Hasil untuk ' + query + ' 3', description: 'Deskripsi hasil 3 untuk ' + query }
+                ];
+
+                results.forEach(result => {
+                    const resultCard = document.createElement('div');
+                    resultCard.className = 'result-card';
+                    resultCard.innerHTML = `<h3>${result.title}</h3><p>${result.description}</p><a href="#">More..</a>`;
+                    resultsContainer.appendChild(resultCard);
+                });
+            } else {
+                resultsContainer.innerHTML = '<p>Masukkan kata kunci untuk mencari.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
